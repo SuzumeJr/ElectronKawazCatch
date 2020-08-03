@@ -1,0 +1,23 @@
+{
+  "name": "electronkawazcatch",
+  "version": "1.0.0",
+  "description": "[Kawaz](http://www.kawaz.org/) 作[KawazCatch](https://github.com/giginet/KawazCatch)の [niku](https://github.com/niku) による cocos2d-js 版実装です．",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuzumeJr/ElectronKawazCatch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuzumeJr/ElectronKawazCatch/issues"
+  },
+  "homepage": "https://github.com/SuzumeJr/ElectronKawazCatch#readme",
+  "devDependencies": {
+    "electron": "^9.1.2",
+    "electron-builder": "^22.8.0"
+  }
+}

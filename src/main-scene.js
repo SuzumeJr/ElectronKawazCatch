@@ -191,16 +191,24 @@ var MainSceneLayer = cc.Layer.extend({
         var goldenFruitProbability = MainSceneLayer.GOLDEN_FRUIT_PROBABILITY_BASE + MainSceneLayer.GOLDEN_FRUIT_PROBABILITY_RATE * pastSecond;
         var bombProbability = MainSceneLayer.BOMB_PROBABILITY_BASE + MainSceneLayer.BOMB_PROBABILITY_RATE * pastSecond;
 
-        if(r <= goldenFruitProbability) { // 黄金のフルーツ
+        if(r <= goldenFruitProbability)
+        {
+            // 黄金のフルーツ
             fruitType = MainSceneLayer.FruitType.indexOf("GOLDEN");
-        } else if (r <= goldenFruitProbability + bombProbability) { // 爆弾
+        }
+        else if (r <= goldenFruitProbability + bombProbability)
+        {
+            // 爆弾
             fruitType = MainSceneLayer.FruitType.indexOf("BOMB");
-        } else { // その他のフルーツ
+        }
+        else 
+        {
+            // その他のフルーツ
             fruitType = Math.floor(cc.random0To1() * MainSceneLayer.NORMAL_FRUIT_COUNT);
         }
 
         // フルーツを作成する
-        var textureSize = this.fruitsBatchNode_.getTextureAtlas().getTexture().getContentSize();
+        var textureSize = this.fruitsBatchNode_.getTexture().getContentSize();
         var fruitWidth = (textureSize.width / MainSceneLayer.FruitType.length);
         var fruit = new cc.Sprite(res.fruits, cc.rect(fruitWidth * fruitType,
                                                       0,
