@@ -46,8 +46,8 @@ function createWindow()
 {
 	// mainWindowを作成（windowの大きさや、Kioskモードにするかどうかなどもここで定義できる）
 	mainWindow = new BrowserWindow({
-		width: 840,
-		height: 540,
+		width: 450,
+		height: 700,
 		webPreferences: {
 			nodeIntegration: true
 		}
@@ -60,7 +60,7 @@ function createWindow()
 	mainWindow.loadURL('file://' + __dirname + '/index.html');
 	
 	// ChromiumのDevツールを開く
-	mainWindow.webContents.openDevTools();
+	// mainWindow.webContents.openDevTools();
 	
 	//ウインドクローズ時イベント処理設定
 	mainWindow.on('closed', function() {
